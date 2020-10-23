@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main
 {
@@ -20,9 +21,8 @@ public class Main
     }
 
     public static String getString(String message) {
-        try (var in = new Scanner(System.in)) {
-            System.out.print(message);
-            return in.nextLine();
-        }
+        var in = new Scanner(System.in);
+        System.out.print(message + "\n");
+        return in.nextLine();
     }
 }
